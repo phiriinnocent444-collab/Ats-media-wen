@@ -1,0 +1,17 @@
+{
+  "name": "ats-media-house",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node --check server.js && node --check src/db.js && node --check src/security.js && node --check src/routes/api.js && node --check src/routes/web.js && node --check src/views/layout.js && node --check src/views/publicPages.js && node --check src/views/memberPages.js && node --check src/views/adminPages.js && node --check src/rules.test.js",
+    "lint": "node --check server.js && node --check src/db.js && node --check src/security.js && node --check src/routes/api.js && node --check src/routes/web.js && node --check src/views/layout.js && node --check src/views/publicPages.js && node --check src/views/memberPages.js && node --check src/views/adminPages.js && node --check src/rules.test.js",
+    "test": "node --test src/rules.test.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  }
+}
